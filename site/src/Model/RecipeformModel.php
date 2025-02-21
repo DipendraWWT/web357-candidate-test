@@ -309,6 +309,25 @@ class RecipeformModel extends FormModel
 			return $data;
 		}
 
+		// Support for multiple or not foreign key field: serving_size
+		$serving_size_array = array();
+
+		foreach ((array) $data->serving_size as $value)
+		{
+			if (!is_array($value))
+			{
+				$serving_size_array[] = $value;
+			}
+		}
+		if(!empty($serving_size_array)){
+
+		$data->serving_size = $serving_size_array;
+		}
+
+			return $data;
+		}
+		// Support for multiple or not foreign key field: serving_size
+
 		return array();
 	}
 

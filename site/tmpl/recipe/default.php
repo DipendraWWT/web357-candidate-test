@@ -61,12 +61,31 @@ if (!$canEdit && Factory::getApplication()->getIdentity()->authorise('core.edit.
 			<?php
 
 			if (!empty($this->item->difficulty) || $this->item->difficulty === 0)
-			{
-				echo Text::_('COM_WEB357TEST_RECIPES_DIFFICULTY_OPTION_' . preg_replace('/[^A-Za-z0-9\_-]/', '',strtoupper(str_replace(' ', '_',$this->item->difficulty))));
+			{	
+				echo '<input type="hidden" name="difficulty_type" value="'.Text::_('COM_WEB357TEST_RECIPES_DIFFICULTY_OPTION_' . preg_replace('/[^A-Za-z0-9\_-]/', '',strtoupper(str_replace(' ', '_',$this->item->difficulty)))).'">';
+				if( Text::_('COM_WEB357TEST_RECIPES_DIFFICULTY_OPTION_' . preg_replace('/[^A-Za-z0-9\_-]/', '',strtoupper(str_replace(' ', '_',$this->item->difficulty)))) == "easy"){
+					echo '<i class="fa-solid fa-star"></i>';
+				} else if(Text::_('COM_WEB357TEST_RECIPES_DIFFICULTY_OPTION_' . preg_replace('/[^A-Za-z0-9\_-]/', '',strtoupper(str_replace(' ', '_',$this->item->difficulty)))) == "medium" ){
+					echo '<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>';
+				} else if( Text::_('COM_WEB357TEST_RECIPES_DIFFICULTY_OPTION_' . preg_replace('/[^A-Za-z0-9\_-]/', '',strtoupper(str_replace(' ', '_',$this->item->difficulty)))) == "hard"){
+					echo '<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>';
+				}
 			}
 			?></td>
 		</tr>
 
+		<tr>
+			<th><?php echo Text::_('COM_WEB357TEST_RECIPES_SERVING_SIZE_LABEL'); ?></th>
+			<td>
+			<?php
+
+			if (!empty($this->item->serving_size) || $this->item->serving_size === 0)
+			{
+				echo Text::_('COM_WEB357TEST_RECIPES_SERVING_SIZE_OPTION_' . preg_replace('/[^A-Za-z0-9\_-]/', '',strtoupper(str_replace(' ', '_',$this->item->serving_size))));
+			}
+			?></td>
+		</tr>
+		
 	</table>
 
 </div>
