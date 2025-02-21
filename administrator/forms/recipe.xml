@@ -22,6 +22,13 @@
       <option value="medium">COM_WEB357TEST_RECIPES_DIFFICULTY_OPTION_MEDIUM</option>
       <option value="hard">COM_WEB357TEST_RECIPES_DIFFICULTY_OPTION_HARD</option>
     </field>
+    <field name="serving_size" type="list" label="COM_WEB357TEST_RECIPES_SERVING_SIZE_LABEL" description="COM_WEB357TEST_RECIPES_SERVING_SIZE_DESC" default="1-2 servings" hint="COM_WEB357TEST_RECIPES_SERVING_SIZE_LABEL">
+        <option value="1_2_servings">COM_WEB357TEST_RECIPES_SERVING_SIZE_OPTION_1_2_SERVINGS</option>
+        <option value="2_4_servings">COM_WEB357TEST_RECIPES_SERVING_SIZE_OPTION_2_4_SERVINGS</option>
+        <option value="4_6_servings">COM_WEB357TEST_RECIPES_SERVING_SIZE_OPTION_4_6_SERVINGS</option>
+        <option value="6_8_servings">COM_WEB357TEST_RECIPES_SERVING_SIZE_OPTION_6_8_SERVINGS</option>
+        <option value="8_pluse_servings">COM_WEB357TEST_RECIPES_SERVING_SIZE_OPTION_8_PLUSE_SERVINGS</option>
+    </field>
     <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
   </fieldset>
 </form>

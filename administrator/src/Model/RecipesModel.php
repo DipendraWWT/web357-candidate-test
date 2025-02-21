@@ -50,6 +50,7 @@ class RecipesModel extends ListModel
 				'ingredients', 'a.ingredients',
 				'cooking_time', 'a.cooking_time',
 				'difficulty', 'a.difficulty',
+				'serving_size', 'a.serving_size',
 			);
 		}
 
@@ -206,6 +207,11 @@ class RecipesModel extends ListModel
 		foreach ($items as $oneItem)
 		{
 					$oneItem->difficulty = !empty($oneItem->difficulty) ? Text::_('COM_WEB357TEST_RECIPES_DIFFICULTY_OPTION_' . preg_replace('/[^A-Za-z0-9\_-]/', '',strtoupper(str_replace(' ', '_',$oneItem->difficulty)))) : '';
+		}
+		
+		foreach ($items as $oneItem)
+		{
+					$oneItem->serving_size = !empty($oneItem->serving_size) ? Text::_('COM_WEB357TEST_RECIPES_SERVING_SIZE_OPTION_' . preg_replace('/[^A-Za-z0-9\_-]/', '',strtoupper(str_replace(' ', '_',$oneItem->serving_size)))) : '';
 		}
 
 		return $items;

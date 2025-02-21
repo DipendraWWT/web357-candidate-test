@@ -133,6 +133,26 @@ class RecipeTable extends Table implements VersionableTableInterface, TaggableTa
 			$array['difficulty'] = '';
 		}
 
+		if (isset($array['serving_size']))
+		{
+			if (is_array($array['serving_size']))
+			{
+				$array['serving_size'] = implode(',',$array['serving_size']);
+			}
+			elseif (strpos($array['serving_size'], ',') != false)
+			{
+				$array['serving_size'] = explode(',',$array['serving_size']);
+			}
+			elseif (strlen($array['serving_size']) == 0)
+			{
+				$array['serving_size'] = '';
+			}
+		}
+		else
+		{
+			$array['serving_size'] = '';
+		}
+
 		if (isset($array['params']) && is_array($array['params']))
 		{
 			$registry = new Registry;
