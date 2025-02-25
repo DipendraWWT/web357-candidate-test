@@ -10,9 +10,17 @@
 							description="COM_WEB357TEST_FILTER_STATE_DESC"
 							onchange="this.form.submit();">
 							<option value="">JOPTION_SELECT_PUBLISHED</option>
-						</field>
-        
-
+				</field>
+        <field name="difficulty"
+                type="list"
+                label="COM_WEB357TEST_FILTER_DIFFICULTY"
+                description="COM_WEB357TEST_FILTER_DIFFICULTY_DESC"
+                onchange="this.form.submit();">
+                <option value="">JOPTION_SELECT_DIFFICULTY</option>
+                  <option value="easy">Easy</option>
+                  <option value="medium">Medium</option>
+                  <option value="hard">Hard</option>
+        </field>
     </fields>
 
     <fields name="list">
