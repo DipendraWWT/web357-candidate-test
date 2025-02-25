@@ -4,36 +4,30 @@ Welcome to the Web357 developer skills assessment! 👋 This is a practical test
 
 ## 📝 Development Requirements
 
-### 1. Version Control ⭐
-
--   Create **descriptive commit messages** that clearly explain your changes
--   Make _frequent, atomic commits_ for each logical change
--   ✨ Example of good commit messages:
+### 1. Changelog of Modifications ⭐
 
     ```
-    // Good commit message example: ✅
-    Add serving size parameter with configuration and display
+    
+    // Task 1: Component Parameters : ✅
 
-    - Added serving_size field to configuration.xml
-    - Created new database column for storing serving sizes
-    - Implemented display logic in site/tmpl/recipe/default.php
-    - Added filter options in administrator/components/list.php
-    - Updated language files with new strings
+    - Included a Serving Size field in the recipe form.
+    - Displayed the Serving Size field in the Recipes Listing within the Admin Area.
 
-    // Another good commit example: ✅
-    Update difficulty icons with accessibility improvements
+    // Task 2: Frontend Display : ✅
 
-    - Replaced text-based difficulty with Font Awesome icons
-    - Added aria-labels for screen readers
-    - Included hidden text for accessibility
-    - Updated CSS for icon spacing and alignment
-    - Added tooltip on hover for better UX
+    - Added a Serving Size field to the recipe form.
+    - Displayed the Serving Size on both the Recipes list and individual recipe views on the frontend.
+    - Replaced the text-based Difficulty Levels with Font Awesome icons on the Recipes list and individual recipe views on the frontend.
+    - Presented the Difficulty Levels in a hidden label.
 
-    // Bad commit message example: ❌
-    updates
+    // Task 3: Backend Functionality : ✅
 
-    // Another bad commit message: ❌
-    fixed some stuff
+    - Added a dropdown filter in the backend recipe list to sort by difficulty level (easy/medium/hard).
+
+    // Task 4: Module Development : ✅
+
+    - Developed a new module (mod_web357_random_recipe) to display a random recipe on each page reload, including the recipe title, difficulty, and description.
+
     ```
 
 ### 2. Documentation 📚
